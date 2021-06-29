@@ -19,7 +19,7 @@
                         <h3 class="experience__position">
                             {{ .Title | safeHTML}}
                         </h3>
-                        <h3 class="experience__date">{{ .Date | safeHTML }}</h3>
+                        <h4 class="experience__date">{{ .Date | safeHTML }}</h3>
                     </div>
                     <ul>
                         {{ range .Details }}
@@ -29,7 +29,7 @@
                     <div class="experience__badges">
                         <ul>
                             {{ range .Badges }}
-                            <li class="experience__badge">{{ . }}</li>
+                            <li class="experience__badge code">{{ . }}</li>
                             {{ end }}
                         </ul>
                     </div>

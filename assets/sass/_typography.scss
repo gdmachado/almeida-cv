@@ -1,28 +1,67 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: $font-sans;
+    font-weight: 400;
     line-height: 1.7;
-    font-size: 1.12rem;
-    color: $color-grey-dark;
+    font-size: 1.2rem;
+    // font-size: 16px;
+    @include themed() {
+        color: t('text');
+    }
 }
 
 .mainHeading {
     text-transform: uppercase;
     font-size: 5rem;
-    color: $color-secondary;
+    @include themed() {
+        color: t('text-important');
 
-    & span {
-        color: $color-primary;
+        & span {
+            // color: t('accent');
+            color: #a34b4b;
+            // color: #99524D;
+        }
     }
 }
 
 .section__title {
     font-size: 2.1rem;
-    color: $color-grey-dark;
+    @include themed() {
+        color: t('text-important');
+    }
 }
 
 h1,
 h2 {
     text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: $font-heading;
+}
+
+.code {
+    font-family: $font-mono;
+    font-weight: bold;
+}
+
+a {
+    @include themed() {
+        color: t('text-important');
+        text-decoration: none;
+        transition: color 0.1s ease-in-out;
+        font-weight: 700;
+        background: linear-gradient(to bottom,
+            transparent 0,
+            transparent 60%,
+            t('accent-secondary') 60%,
+            t('accent-secondary') 100%);
+        
+        &:focus {
+            outline-color: t('accent');
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: $backgroundPageLight;
+            background: t('accent');
+        }
+    }
 }

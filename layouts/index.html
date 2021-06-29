@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class='theme theme--{{ .Site.Params.defaultTheme | default "dark" }}'>
     {{ partial "head.html" . }}
-<body>
-    <div class="content">
-        <div class="content__left">
-            <h1 class="mainHeading">{{.Site.Data.content.BasicInfo.FirstName}} <span>{{.Site.Data.content.BasicInfo.LastName}}</span></h1>
+    <body>
+        <div id='test' class="content">
+            <div class="content__left">
+                <h1 class="mainHeading">{{.Site.Data.content.BasicInfo.FirstName}} <span>{{.Site.Data.content.BasicInfo.LastName}}</span><div id='js-theme-switcher'>a</div></h1>
 
-            {{ partial "_profile.html" . }}
-            {{ partial "_experience.html" . }}
-            {{ partial "_education.html" . }}
+                {{ partial "_profile.html" . }}
+                {{ partial "_experience.html" . }}
+                {{ partial "_education.html" . }}
 
+            </div>
+            <div class="content__right">
+
+                {{ partial "_avatar.html" . }}
+                {{ partial "_contacts.html" . }}
+                {{ partial "_skills.html" . }}
+                {{ partial "_languages.html" . }}
+                {{ partial "_diplomas.html" . }}
+                {{ partial "_interests.html" . }}
+            </div>
         </div>
-        <div class="content__right">
-
-            {{ partial "_avatar.html" . }}
-            {{ partial "_contacts.html" . }}
-            {{ partial "_skills.html" . }}
-            {{ partial "_languages.html" . }}
-            {{ partial "_diplomas.html" . }}
-            {{ partial "_interests.html" . }}
-        </div>
-    </div>
-</body>
+    </body>
 </html>

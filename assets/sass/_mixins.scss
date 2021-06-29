@@ -1,7 +1,7 @@
 @mixin shadow($distance) {
     -webkit-box-shadow: $distance * 1rem $distance * 2rem $distance * 3rem rgba($color-grey-dark, $distance * 0.3);
     -moz-box-shadow: $distance * 1rem $distance * 2rem $distance * 3rem rgba($color-grey-dark, $distance * 0.3);
-    box-shadow: $distance * 1rem $distance * 2rem $distance * 3rem rgba($color-grey-dark, $distance * 0.3);
+    box-shadow: $distance * 0rem $distance * 1rem $distance * 5rem rgba(#000000, $distance * 0.3);
 }
 
 @mixin hz-center {

@@ -24,7 +24,9 @@
         position: absolute;
         float: right;
         width: $width-right-col;
-        background-color: $color-right-col;
+        @include themed() {
+            background-color: t('bg-card');
+        }
         height: 100%;
         padding: 2rem 3rem;
         right: 1rem;

@@ -9,6 +9,15 @@ $color-secondary: {{ .Site.Params.colorSecondary | default "#aaa"}} !default;
 $color-grey-dark: {{ .Site.Params.colorDark | default "#666"}} !default;
 $pages: {{ .Site.Params.pages | default 1}} !default;
 
+// fonts
+$font-sans: {{ .Site.Params.fonts.fontSans | default "'Roboto', sans-serif" }} !default;
+$font-mono: {{ .Site.Params.fonts.fontMono | default "'Consolas', monospace" }} !default;
+$font-serif: {{ .Site.Params.fonts.fontSerif | default "'Verdana', serif" }} !default;
+$font-heading: {{ .Site.Params.fonts.fontHeading | default "'Oswald', sans-serif" }} !default;
+
+
+@import "settings";
+@import "color_themes";
 @import "abstract";
 @import "functions";
 @import "mixins";

@@ -7,11 +7,9 @@
 }
 
 html {
-    font-size: 62.5%;
-    background-color: $color-background;
-
     @media print {
         background-color: $color-white;
+        font-size: 62.5%;
     }
 }
 
@@ -19,7 +17,9 @@ html {
     // A4 paper
     width: $page-width;
     min-height: paper_height($page-width);
-    background-color: $color-white;
+    @include themed() {
+        background-color: t('bg-page');
+    }
 
     @media screen and (min-width: 60rem) {
         margin: 6rem 0;
@@ -33,6 +33,10 @@ html {
 }
 
 body {
+    @include themed() {
+        background-color: t('bg');
+    }
+
     box-sizing: border-box;
 }
 
@@ -44,6 +48,8 @@ body {
 }
 
 ::selection {
-    color: $color-white;
-    background-color: darken(rgba($color-primary, 0.6), 10%);
+    @include themed() {
+        color: t('text-selection');
+        background-color: t('accent');
+    }
 }

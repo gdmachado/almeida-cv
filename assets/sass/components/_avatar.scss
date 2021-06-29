@@ -19,7 +19,7 @@
 
     &__img {
         object-fit: cover;
-        width: 110%;
+        width: 90%;
         transition: all 0.3s cubic-bezier($cubic);
         @include all-center;
 
